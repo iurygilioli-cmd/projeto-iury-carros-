@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🚗 Mundo dos Carros - 1º Ano</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            background: linear-gradient(135deg, #050505, #252525, #d90429);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+            margin: 5px;
+        }
+
+        /* MENU */
+
+        nav {
+            background-color: #111;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff1744;
+        }
+
+        /* SEÇÕES */
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #d90429;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        /* INÍCIO */
+
+        .inicio {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .inicio img {
+            width: 45%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+        }
+
+        .inicio-texto {
+            width: 55%;
+        }
+
+        .inicio-texto h2 {
+            text-align: left;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #d90429;
+            margin-bottom: 10px;
+        }
+
+        /* ATIVIDADES */
+
+        .atividade {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 6px solid #d90429;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .atividade h3 {
+            color: #d90429;
+            margin-bottom: 10px;
+        }
+
+        /* PROJETO */
+
+        .projeto {
+            background: linear-gradient(135deg, #111111, #3b3b3b, #d90429);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .projeto h2 {
+            color: white;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #d90429;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background-color: #a80320;
+        }
+
+        /* REFLEXÃO */
+
+        .reflexao {
+            background-color: #fff0f2;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border-top: 5px solid #d90429;
+        }
+
+        .reflexao p {
+            font-size: 19px;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+
+            .inicio {
+                flex-direction: column;
+            }
+
+            .inicio img,
+            .inicio-texto {
+                width: 100%;
+            }
+
+            .inicio-texto h2 {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <h1>🚗 Mundo dos Carros</h1>
+
+        <p>1º Ano do Ensino Médio</p>
+
+        <p>
+            Velocidade, tecnologia, design e inovação no mundo automotivo.
+        </p>
+
+    </header>
+
+
+    <!-- MENU -->
+
+    <nav>
+
+        <a href="#inicio">Início</a>
+
+        <a href="#carros">Carros</a>
+
+        <a href="#tecnologia">Tecnologia</a>
+
+        <a href="#atividades">Atividades</a>
+
+        <a href="#projeto">Projeto</a>
+
+    </nav>
+
+
+    <!-- INÍCIO -->
+
+    <section id="inicio">
+
+        <div class="inicio">
+
+            <img
+                src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+                alt="Carro esportivo"
+            >
+
+            <div class="inicio-texto">
+
+                <h2>🏎️ Bem-vindos ao Mundo dos Carros!</h2>
+
+                <p>
+                    Este espaço foi criado para conhecer melhor
+                    o <strong>universo automotivo</strong> e entender
+                    como os carros fazem parte da nossa sociedade.
+                </p>
+
+                <br>
+
+                <p>
+                    Vamos conhecer diferentes tipos de veículos,
+                    tecnologias automotivas, motores, segurança,
+                    carros elétricos e as novidades que estão
+                    transformando o futuro dos automóveis.
+                </p>
+
+                <br>
+
+                <p>
+                    🔧 Conhecer + 🚗 Explorar + ⚙️ Aprender
+                </p>
+
+                <br>
+
+                <p>
+                    Os carros evoluíram muito ao longo dos anos,
+                    passando de veículos simples para máquinas
+                    equipadas com tecnologias avançadas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARROS -->
+
+    <section id="carros">
+
+        <h2>🚘 Tipos de Carros</h2>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8"
+                    alt="Carro esportivo"
+                >
+
+                <h3>🏎️ Carros Esportivos</h3>
+
+                <p>
+                    Veículos desenvolvidos com foco em desempenho,
+                    velocidade, aerodinâmica e design.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf"
+                    alt="Carro moderno"
+                >
+
+                <h3>🚙 SUVs</h3>
+
+                <p>
+                    Veículos maiores que combinam espaço,
+                    conforto e diferentes possibilidades de uso.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551830820-330a71b99659"
+                    alt="Carro elétrico"
+                >
+
+                <h3>⚡ Carros Elétricos</h3>
+
+                <p>
+                    Automóveis que utilizam motores elétricos
+                    e baterias para realizar seus deslocamentos.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1542362567-b07e54358753"
+                    alt="Carro clássico"
+                >
+
+                <h3>🏁 Carros Clássicos</h3>
+
+                <p>
+                    Automóveis que marcaram épocas e continuam
+                    sendo admirados por seu design e história.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TECNOLOGIA -->
+
+    <section id="tecnologia">
+
+        <h2>⚙️ Tecnologia Automotiva</h2>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>🔋 Carros Elétricos</h3>
+
+                <p>
+                    Utilizam energia elétrica para movimentar
+                    o veículo e representam uma das tecnologias
+                    presentes na evolução dos automóveis.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🤖 Direção Autônoma</h3>
+
+                <p>
+                    Tecnologias capazes de auxiliar o motorista
+                    em determinadas tarefas de condução.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📱 Carros Conectados</h3>
+
+                <p>
+                    Sistemas que conectam o veículo à internet,
+                    smartphones e outros dispositivos.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🛡️ Segurança</h3>
+
+                <p>
+                    Airbags, freios modernos, sensores e câmeras
+                    ajudam a aumentar a segurança dos veículos.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARROS E SOCIEDADE -->
+
+    <section>
+
+        <div class="reflexao">
+
+            <h2>🌎 Carros e Sociedade</h2>
+
+            <p>
+                Os automóveis transformaram a maneira como
+                as pessoas se deslocam e transportam produtos.
+            </p>
+
+            <br>
+
+            <p>
+                Atualmente, os carros também estão relacionados
+                a temas como tecnologia, mobilidade urbana,
+                segurança e meio ambiente.
+            </p>
+
+            <br>
+
+            <p>
+                Por isso, é importante conhecer os veículos,
+                seus benefícios, seus impactos e as tecnologias
+                utilizadas para torná-los cada vez mais eficientes.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ATIVIDADES -->
+
+    <section id="atividades">
+
+        <h2>📝 Atividades Práticas</h2>
+
+
+        <div class="atividade">
+
+            <h3>🚗 Atividade 1 – História dos Carros</h3>
+
+            <p>
+                Pesquise como surgiram os primeiros automóveis
+                e explique como os carros mudaram ao longo dos anos.
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>🔧 Atividade 2 – Partes de um Carro</h3>
+
+            <p>
+                Escolha um automóvel e identifique pelo menos
+                cinco partes importantes do veículo, explicando
+                a função de cada uma.
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>⚡ Atividade 3 – Carros Elétricos</h3>
+
+            <p>
+                Pesquise como funciona um carro elétrico e
+                compare suas principais características com
+                as de um carro movido a combustível.
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>🌱 Atividade 4 – Carros e Meio Ambiente</h3>
+
+            <p>
+                Pesquise tecnologias utilizadas nos automóveis
+                que podem contribuir para reduzir impactos
+                ambientais.
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>🔮 Atividade 5 – O Carro do Futuro</h3>
+
+            <p>
+                Imagine um carro que poderá existir no futuro.
+                Descreva seu design, suas tecnologias e como
+                ele funcionaria.
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>🏁 Atividade 6 – Meu Carro Ideal</h3>
+
+            <p>
+                Crie seu carro ideal. Escolha o tipo de motor,
+                design, cor, tecnologias, equipamentos de segurança
+                e explique por que escolheu essas características.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJETO FINAL -->
+
+    <section id="projeto">
+
+        <div class="projeto">
+
+            <h2>🏎️ Projeto Final – Meu Carro do Futuro</h2>
+
+            <p>
+                Em grupos, vocês deverão criar um projeto
+                de um carro inovador para o futuro.
+            </p>
+
+            <br>
+
+            <p>
+                O projeto deverá apresentar:
+            </p>
+
+            <br>
+
+            <p>
+                ✅ Nome do carro
+                <br>
+                ✅ Desenho ou protótipo
+                <br>
+                ✅ Tipo de motor
+                <br>
+                ✅ Tecnologias utilizadas
+                <br>
+                ✅ Equipamentos de segurança
+                <br>
+                ✅ Como o carro ajuda o meio ambiente
+                <br>
+                ✅ Público que utilizará o veículo
+                <br>
+                ✅ Principais benefícios
+                <br>
+                ✅ Apresentação para a turma
+            </p>
+
+            <a href="#inicio" class="botao">
+                Voltar ao início
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            🚗 Mundo dos Carros – 1º Ano do Ensino Médio
+        </p>
+
+        <p>
+            Acelerar. Explorar. Conhecer. Inovar.
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 - Projeto Educacional
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
